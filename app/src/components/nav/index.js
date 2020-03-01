@@ -24,8 +24,8 @@ class Nav extends Component {
       <nav className="fixed pin-t pin-x z-10 bg-white border-b border-grey-lighter shadow select-none p-2">
         <div className="flex max-w-xl mx-auto relative">
           <div className="absolute pin-y flex items-center -ml-12">
-            <a href="https://initiativet.dk/" target="_initiativet" rel="noopener noreferrer">
-              <img src="/favicon.png" alt="Initiativets logo" className="block w-6 h-6" />
+            <a href="https://lykkepartiet.dk/" target="_lykkepartiet" rel="noopener noreferrer">
+              <img src="/favicon.png" alt="Lykkepartiets logo" className="block w-6 h-6" />
             </a>
           </div>
           <div className="hidden md:flex flex-grow flex-no-shrink pr-2">

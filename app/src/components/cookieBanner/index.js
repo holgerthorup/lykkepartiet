@@ -28,7 +28,7 @@ class Home extends Component {
               <span role="img" aria-label="Cookie">
                 🍪
               </span>
-              <a href="https://initiativet.dk/privacy" target="_privacy" className="inline-link">
+              <a href="https://lykkepartiet.dk/privacy" target="_privacy" className="inline-link">
                 Læs mere her
               </a>.
             </p>

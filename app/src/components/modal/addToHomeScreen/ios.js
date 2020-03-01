@@ -6,7 +6,7 @@ class AddToHomeScreenModalIOS extends Component {
     return (
       <div>
         <h2>Føj til hjemmeskærm</h2>
-        <p>Vil du prøve Initiativets platform som app?</p>
+        <p>Vil du prøve Lykkepartiets platform som app?</p>
         <p>
           Klik på <FeatherIcon name="Share" />-ikonet nederst i din browser, og tryk på 'Føj til hjemmeskærm'.
         </p>

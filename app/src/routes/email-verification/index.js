@@ -7,7 +7,7 @@ class EmailVerification extends Component {
         <div className="max-w-xl mx-auto text-center">
           <h1>Bekræft din e-mail</h1>
           <p className="mx-auto mb-4">
-            Velkommen til Initiativets platform! Før du kan logge ind første gang, skal du verificere din e-mail
+            Velkommen til Lykkepartiets platform! Før du kan logge ind første gang, skal du verificere din e-mail
             addresse. Vi har sendt en e-mail til dig med et link, som du skal klikke på.
           </p>
           <p className="mx-auto">

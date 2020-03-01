@@ -111,7 +111,7 @@ class CandidatePage extends Component {
             </Link>
             <p className="mx-auto">
               Burde der være en side her?{' '}
-              <a href="mailto:dinevenner@initiativet.dk" className="inline-link">
+              <a href="mailto:dinevenner@lykkepartiet.dk" className="inline-link">
                 Send os en mail
               </a>.
             </p>
@@ -144,7 +144,7 @@ class CandidatePage extends Component {
             <Heading title={candidate.firstname + ' ' + candidate.lastname} />
             <div className="block md:hidden flex -mx-1 mb-4">
               <a
-                href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/candidate/${candidate.id}`}
+                href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/candidate/${candidate.id}`}
                 target="_fbshare"
                 rel="noopener noreferrer"
                 className="btn btn-facebook w-full min-w-0 mx-1">
@@ -153,9 +153,9 @@ class CandidatePage extends Component {
               <a
                 href={`https://twitter.com/intent/tweet?text=Støt%20${candidate.firstname}%20${
                   candidate.lastname
-                }s%20kandidatur%20hos%20Initiativet!&url=https://app.initiativet.dk/candidate/${
+                }s%20kandidatur%20hos%20Lykkepartiet!&url=https://app.lykkepartiet.dk/candidate/${
                   candidate.id
-                }&via=initiativetdk`}
+                }&via=lykkepartiet`}
                 target="_twittershare"
                 rel="noopener noreferrer"
                 className="btn btn-twitter w-full min-w-0 mx-1">
@@ -281,7 +281,7 @@ class CandidatePage extends Component {
                         {candidate.active ? (
                           <p className="mb-4">
                             Du mangler <b>{candidate.support > 150 ? 'ingen' : 150 - candidate.support}</b> støtter for
-                            at blive berettiget til opstilling på Initiativets liste.
+                            at blive berettiget til opstilling på Lykkepartiets liste.
                           </p>
                         ) : (
                           <p className="mb-4">Dit kandidatur er ikke offentligt. Kun du kan se denne side.</p>
@@ -294,7 +294,7 @@ class CandidatePage extends Component {
                       <div className="text-center text-grey-darker p-4">
                         <p className="mb-4">
                           {candidate.firstname} mangler <b>{150 - candidate.support}</b> støtter for at blive berettiget
-                          til opstilling på Initiativets liste.
+                          til opstilling på Lykkeparties liste.
                         </p>
                         {isSupporting ? (
                           <button onClick={() => this.supportingCandidate(false)} className="btn btn-secondary">
@@ -309,7 +309,7 @@ class CandidatePage extends Component {
                     )}
                   </div>
                   <a
-                    href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/candidate/${
+                    href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/candidate/${
                       candidate.id
                     }`}
                     target="_fbshare"
@@ -320,9 +320,9 @@ class CandidatePage extends Component {
                   <a
                     href={`https://twitter.com/intent/tweet?text=Støt%20${candidate.firstname}%20${
                       candidate.lastname
-                    }s%20kandidatur%20hos%20Initiativet!&url=https://app.initiativet.dk/candidate/${
+                    }s%20kandidatur%20hos%20Lykkepartiet!&url=https://app.lykkepartiet.dk/candidate/${
                       candidate.id
-                    }&via=initiativetdk`}
+                    }&via=lykkepartiet`}
                     target="_twittershare"
                     rel="noopener noreferrer"
                     className="btn btn-twitter w-full">

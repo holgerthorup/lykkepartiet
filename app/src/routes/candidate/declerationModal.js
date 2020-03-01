@@ -7,7 +7,7 @@ class DeclerationModal extends Component {
       <div>
         <h2>Vi har registreret din støtte til {candidate.firstname + ' ' + candidate.lastname}</h2>
         <p>
-          For at få kandidaten i Folketinget, har vi også brug for din vælgererklæring, så Initiativet kan stille op til
+          For at få kandidaten i Folketinget, har vi også brug for din vælgererklæring, så Lykkepartiet kan stille op til
           næste Folketingsvalg.
         </p>
         <div className="mt-6 mb-2">
@@ -17,7 +17,7 @@ class DeclerationModal extends Component {
             Luk vinduet
           </button>
           <a
-            href={`https://initiativet.dk/sign/forward?referrer=${window.location}`}
+            href={`https://lykkepartiet.dk/sign/forward?referrer=${window.location}`}
             target="_declaration"
             onClick={() => this.props.giveDecleration()}
             className="btn btn-primary m-2">

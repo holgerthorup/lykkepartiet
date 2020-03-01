@@ -14,7 +14,7 @@ export default {
   emailInputPlaceholder: "email@email.com",
   loginSubmitLabel: "Log ind",
   passwordInputPlaceholder: "Kodeord",
-  title: "Initiativet",
+  title: "Lykkepartiet",
   forgotPasswordTitle: "",
   showPassword: "Vis kodeord",
   loginLabel: "Log ind",

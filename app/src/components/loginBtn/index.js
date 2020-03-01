@@ -15,15 +15,8 @@ class Login extends Component {
     );
   }
   login = async () => {
-    const clientId = '1SQLoULbKUTpJC0T5zv2ailBYb3Jw51u';
-    const domain = 'initiativet.eu.auth0.com';
-    // const params = [
-    //   'client=' + clientId,
-    //   'logoURL=' + window.location.origin + '/auth_logo.svg',
-    //   'initialScreen=' + this.props.type
-    // ];
-    // const URL = 'https://' + domain + '/login?' + params.join('&');
-    // https://initiativet.eu.auth0.com/login?client=1SQLoULbKUTpJC0T5zv2ailBYb3Jw51u&logoURL=https://app.initiativet.dk/auth_logo.svg&initialScreen=signUp
+    const clientId = '9lN9yuL4dJ6BteKCnhnMC5Qn7gOUtRFG';
+    const domain = 'lykkepartiet.eu.auth0.com';
     const options = {
       auth: {
         redirectUrl: window.location.origin + '/auth',
@@ -49,7 +42,7 @@ class Login extends Component {
           name: 'terms',
           type: 'checkbox',
           placeholder:
-            'Jeg accepterer <a style="text-decoration: underline" href="https://initiativet.dk/privacy">Initiativets privatlivspolitik</a>',
+            'Jeg accepterer <a style="text-decoration: underline" href="https://lykkepartiet.dk/privacy">Lykkepartiet privatlivspolitik</a>',
           prefill: 'true',
           validator: function(terms) {
             return {

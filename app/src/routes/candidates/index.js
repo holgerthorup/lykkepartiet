@@ -67,9 +67,9 @@ class Candidates extends Component {
     return (
       <div className="flex-auto px-2">
         {showNotificationBox && (
-          <NotificationBox title="Initiativets kommende kandidater" closeNotificationBox={this.closeNotificationBox}>
+          <NotificationBox title="Lykkepartiets kommende kandidater" closeNotificationBox={this.closeNotificationBox}>
             <p>
-              Det her er kandidatsiden. Her finder du en liste af borgere, som søger opstilling hos Initiativet. Kig
+              Det her er kandidatsiden. Her finder du en liste af borgere, som søger opstilling hos Lykkepartiet. Kig
               listen igennem – og støt den kandidat, du er gladest for.
             </p>
           </NotificationBox>
@@ -123,7 +123,7 @@ class Candidates extends Component {
                   <FeatherIcon name="User" className="mr-2" />Mit kandidatur
                 </Link>
               ) : (
-                <a href="https://initiativet.dk/stilop" target="_stilop" className="flex-auto btn btn-white">
+                <a href="https://lykkepartiet.dk/stilop" target="_stilop" className="flex-auto btn btn-white">
                   <FeatherIcon name="UserPlus" className="mr-2" />Bliv kandidat
                 </a>
               )}

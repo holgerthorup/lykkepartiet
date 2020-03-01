@@ -15,7 +15,7 @@ class Curious extends Component {
           <Login type="login" className="btn btn-white mt-4 mb-8" />
           <p className="mx-auto">
             Virker det stadig ikke?{" "}
-            <a href="mailto:dinevenner@initiativet.dk" className="inline-link">
+            <a href="mailto:dinevenner@lykkepartiet.dk" className="inline-link">
               Send os en mail
             </a>.
           </p>

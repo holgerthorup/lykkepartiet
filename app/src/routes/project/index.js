@@ -77,7 +77,7 @@ class ProjectPage extends Component {
             </Link>
             <p className="mx-auto">
               Burde der være en side her?{' '}
-              <a href="mailto:dinevenner@initiativet.dk" className="inline-link">
+              <a href="mailto:dinevenner@lykkepartiet.dk" className="inline-link">
                 Send os en mail
               </a>.
             </p>
@@ -99,16 +99,16 @@ class ProjectPage extends Component {
             <Heading title={project.title} />
             <div className="block md:hidden flex -mx-1 mb-4">
               <a
-                href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/project/${project.id}`}
+                href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/project/${project.id}`}
                 target="_fbshare"
                 rel="noopener noreferrer"
                 className="btn btn-facebook w-full min-w-0 mx-1">
                 Del på Facebook
               </a>
               <a
-                href={`https://twitter.com/intent/tweet?text=Spændende%20projekt%20på%20Initiativets%20platform:%20${
+                href={`https://twitter.com/intent/tweet?text=Spændende%20projekt%20på%20Lykkepartiets%20platform:%20${
                   project.title
-                }!&url=https://app.initiativet.dk/project/${project.id}&via=initiativetdk`}
+                }!&url=https://app.lykkepartiet.dk/project/${project.id}&via=lykkepartiet`}
                 target="_twittershare"
                 rel="noopener noreferrer"
                 className="btn btn-twitter w-full min-w-0 mx-1">
@@ -176,16 +176,16 @@ class ProjectPage extends Component {
                   </div>
                   <div className="hidden md:block">
                     <a
-                      href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/project/${project.id}`}
+                      href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/project/${project.id}`}
                       target="_fbshare"
                       rel="noopener noreferrer"
                       className="btn btn-facebook w-full mb-2">
                       Del projektet på Facebook
                     </a>
                     <a
-                      href={`https://twitter.com/intent/tweet?text=Spændende%20projekt%20på%20Initiativets%20platform:%20${
+                      href={`https://twitter.com/intent/tweet?text=Spændende%20projekt%20på%20Lykkepartiets%20platform:%20${
                         project.title
-                      }!&url=https://app.initiativet.dk/project/${project.id}&via=initiativetdk`}
+                      }!&url=https://app.lykkepartiet.dk/project/${project.id}&via=lykkepartiet`}
                       target="_twittershare"
                       rel="noopener noreferrer"
                       className="btn btn-twitter w-full">

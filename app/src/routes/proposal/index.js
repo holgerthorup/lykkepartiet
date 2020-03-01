@@ -57,7 +57,7 @@ class ProposalPage extends Component {
             </Link>
             <p className="mx-auto">
               Burde der være en side her?{' '}
-              <a href="mailto:dinevenner@initiativet.dk" className="inline-link">
+              <a href="mailto:dinevenner@lykkepartiet.dk" className="inline-link">
                 Send os en mail
               </a>.
             </p>
@@ -92,7 +92,7 @@ class ProposalPage extends Component {
           <Heading title={proposal.shortTitel.replace('.', '')} />
           <div className="block md:hidden flex -mx-1 mb-4">
             <a
-              href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/proposal/${proposal.id}`}
+              href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/proposal/${proposal.id}`}
               target="_fbshare"
               rel="noopener noreferrer"
               className="btn btn-facebook w-full min-w-0 mx-1">
@@ -102,7 +102,7 @@ class ProposalPage extends Component {
               href={`https://twitter.com/intent/tweet?text=Spændende%20forslag%20fra%20Folketinget:%20${proposal.shortTitel.replace(
                 '.',
                 '!'
-              )}&url=https://app.initiativet.dk/proposal/${proposal.id}&via=initiativetdk`}
+              )}&url=https://app.lykkepartiet.dk/proposal/${proposal.id}&via=lykkepartiet`}
               target="_twittershare"
               rel="noopener noreferrer"
               className="btn btn-twitter w-full min-w-0 mx-1">
@@ -166,7 +166,7 @@ class ProposalPage extends Component {
                 </div>
                 <div className="hidden md:block">
                   <a
-                    href={`https://facebook.com/sharer/sharer.php?u=https://app.initiativet.dk/proposal/${proposal.id}`}
+                    href={`https://facebook.com/sharer/sharer.php?u=https://app.lykkepartiet.dk/proposal/${proposal.id}`}
                     target="_fbshare"
                     rel="noopener noreferrer"
                     className="btn btn-facebook w-full my-2">
@@ -176,7 +176,7 @@ class ProposalPage extends Component {
                     href={`https://twitter.com/intent/tweet?text=Spændende%20forslag%20fra%20Folketinget:%20${proposal.shortTitel.replace(
                       '.',
                       '!'
-                    )}&url=https://app.initiativet.dk/proposal/${proposal.id}&via=initiativetdk`}
+                    )}&url=https://app.lykkepartiet.dk/proposal/${proposal.id}&via=lykkepartiet`}
                     target="_twittershare"
                     rel="noopener noreferrer"
                     className="btn btn-twitter w-full">
