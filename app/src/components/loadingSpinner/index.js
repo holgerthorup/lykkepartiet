@@ -67,7 +67,7 @@ class LoadingSpinner extends Component {
   render() {
     const RandomIcon = Icons[Math.floor(Math.random() * Icons.length)];
     return (
-      <div className="loading-spinner flex-auto flex items-center justify-center text-teal p-2">
+      <div className="loading-spinner flex-auto flex items-center justify-center text-gold p-2">
         <RandomIcon />
       </div>
     );

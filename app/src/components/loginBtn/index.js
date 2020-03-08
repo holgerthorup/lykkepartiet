@@ -27,7 +27,7 @@ class Login extends Component {
       },
       theme: {
         logo: window.location.origin + '/favicon.png',
-        primaryColor: '#42BFB4'
+        primaryColor: '#AF8751'
       },
       additionalSignUpFields: [
         {
@@ -55,7 +55,7 @@ class Login extends Component {
       languageDictionary: Da,
       allowForgotPassword: true,
       allowShowPassword: true,
-      rememberLastLogin: true,
+      rememberLastLogin: false,
       initialScreen: this.props.type,
       allowedConnections: ['Username-Password-Authentication', 'facebook']
     };

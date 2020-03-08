@@ -84,7 +84,9 @@ let colors = {
   red: '#e3342f',
   'red-light': '#ef5753',
   'red-lighter': '#f9acaa',
-  'red-lightest': '#fcebea'
+  'red-lightest': '#fcebea',
+
+  'gold': '#AF8751'
 };
 
 module.exports = {
@@ -148,7 +150,7 @@ module.exports = {
   */
 
   fonts: {
-    clear: ['Clear Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
+    clear: ['Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'sans-serif'],
     sans: [
       '-apple-system',
       'BlinkMacSystemFont',

@@ -123,7 +123,7 @@ class Candidates extends Component {
                   <FeatherIcon name="User" className="mr-2" />Mit kandidatur
                 </Link>
               ) : (
-                <a href="https://lykkepartiet.dk/stilop" target="_stilop" className="flex-auto btn btn-white">
+                <a href="https://lykkepartiet.dk/candidate" target="_stilop" className="flex-auto btn btn-white">
                   <FeatherIcon name="UserPlus" className="mr-2" />Bliv kandidat
                 </a>
               )}
@@ -145,7 +145,7 @@ class Candidates extends Component {
                       <h4 className="absolute pin-x pin-b text-center text-white md:text-xl font-bold bg-transparent-to-black pt-4 pb-2 mb-0">
                         {candidate.firstname + ' ' + candidate.lastname}
                       </h4>
-                      <span className="absolute pin-t pin-r text-white bg-teal leading-none rounded-sm px-2 py-1 m-1">
+                      <span className="absolute pin-t pin-r text-white bg-gold leading-none rounded-sm px-2 py-1 m-1">
                         {candidate.support}
                       </span>
                     </div>
@@ -157,7 +157,7 @@ class Candidates extends Component {
                         <ul className="list-reset flex-auto flex flex-col justify-center">
                           {candidate.commitments.map((commitment, index) => (
                             <li key={index} className="block leading-normal truncate">
-                              <FeatherIcon name={commitment.category.feathericon} className="text-teal mr-2" />
+                              <FeatherIcon name={commitment.category.feathericon} className="text-gold mr-2" />
                               {commitment.category.title}
                             </li>
                           ))}
