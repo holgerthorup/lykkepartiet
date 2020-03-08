@@ -25,7 +25,7 @@ async function resultsMailBatch() {
           htmlNode('#proposal-title').html(proposal.data.shortTitel.toLowerCase());
           htmlNode('#proposal-button').after(
             '<a id="proposal-button-link" style="text-decoration:none; color:#ffffff; font-weight:normal;" target="_blank" href="' +
-              'https://app.initiativet.dk/proposal/' +
+              'https://app.Lykkepartiet.dk/proposal/' +
               proposal.id +
               '"> <strong>Se resultaterne for forslaget</strong></a>'
           );
@@ -33,7 +33,7 @@ async function resultsMailBatch() {
             to: {
               [user.email]: user.firstname
             },
-            from: ['dinevenner@initiativet.dk', 'Initiativet'],
+            from: ['dinevenner@lykkepartiet.dk', 'Lykkepartiet'],
             subject: 'Der er kommet nye lovforslag til dig!',
             html: htmlNode.html()
           };

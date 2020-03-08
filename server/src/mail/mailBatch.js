@@ -71,7 +71,7 @@ async function mailBatch(schedule) {
       htmlNode('#number-of-proposals').html(user.filteredProposalList.length);
       for (const proposal of user.filteredProposalList) {
         htmlNode('#proposal-titel-field').after(
-          '<a href=https://app.initiativet.dk/proposal/' +
+          '<a href=https://app.lykkepartiet.dk/proposal/' +
             proposal.proposalId +
             "><strong style='line-height:24px; font-size:16px; color:#222222;'>" +
             proposal.shortTitel +
@@ -83,7 +83,7 @@ async function mailBatch(schedule) {
         to: {
           [user.email]: user.firstname
         },
-        from: ['dinevenner@initiativet.dk', 'Initiativet'],
+        from: ['dinevenner@lykkepartiet.dk', 'Lykkepartiet'],
         subject: 'Der er kommet nye lovforslag til dig!',
         html: htmlNode.html()
       };

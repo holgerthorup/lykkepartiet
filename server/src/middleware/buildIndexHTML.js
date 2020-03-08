@@ -17,8 +17,8 @@ function buildIndexHTML({ title, description, image, square, alt, url, host }) {
       <meta property="fb:app_id" content="211835762924678">
       <meta name="twitter:card" content=${twitterCard}>
       <meta name="twitter:image" content="${image}">
-      <meta name="twitter:site" content="@initiativetdk">
-      <meta name="twitter:creator" content="@initiativetdk" />
+      <meta name="twitter:site" content="@lykkepartiet">
+      <meta name="twitter:creator" content="@lykkepartiet" />
       <meta name="twitter:url" content="${url}/">
       <meta name="twitter:description" content="${description}">
       <meta name="twitter:title" content="${title}">
@@ -27,7 +27,7 @@ function buildIndexHTML({ title, description, image, square, alt, url, host }) {
 
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="default">
-      <meta name="apple-mobile-web-app-title" content="Initiativet">
+      <meta name="apple-mobile-web-app-title" content="Lykkepartiet">
       <link rel="apple-touch-icon" href="${host}/assets/icons/icon-120.png">
       <link rel="apple-touch-icon" sizes="152x152" href="${host}/assets/icons/icon-152.png">
       <link rel="apple-touch-icon" sizes="167x167" href="${host}/assets/icons/icon-167.png">
@@ -39,7 +39,7 @@ function buildIndexHTML({ title, description, image, square, alt, url, host }) {
       <link rel="icon" type="image/png" href="${host}/assets/icons/icon-144.png" sizes="144x144">
       <link rel="icon" type="image/png" href="${host}/assets/icons/icon-192.png" sizes="192x192">
 
-      <meta name="application-name" content="Initiativet">
+      <meta name="application-name" content="lykkepartiet">
       <meta name="msapplication-TileColor" content="#ffffff">
       <meta name="msapplication-TileImage" href="${host}/assets/icons/icon-144.png">
     </head>

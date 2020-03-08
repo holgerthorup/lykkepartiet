@@ -9,12 +9,12 @@ async function botMetaTagServer(host, path) {
   const entityId = pathSplit[2];
   let og = {
     // default and fall-back og:
-    title: 'Initiativets digitale platform | Initiativet',
+    title: 'Lykkepartiets digitale platform | Lykkepartiet',
     description:
-      'På Initiativets digitale platform kan du følge med i alle forslag fra Folketinget, finde borgernes egne politiske projekter, udvikle dine egne projekter eller stille op som kandidat.',
-    image: host + '/initiativet_og.png',
+      'På Lykkepartiets digitale platform kan du følge med i alle forslag fra Folketinget, finde borgernes egne politiske projekter, udvikle dine egne projekter eller stille op som kandidat.',
+    image: host + '/lykkepartiet_og.png',
     square: false,
-    alt: 'Initiativets logo på en stor grå baggrund',
+    alt: 'Lykkepartiets logo på en stor hvid baggrund',
     url: host + path,
     host: host
   };
@@ -22,11 +22,11 @@ async function botMetaTagServer(host, path) {
     const candidate = await getCandidateProfile(entityId);
     if (candidate) {
       og = {
-        title: candidate.firstname + ' ' + candidate.lastname + ' | Initiativet',
+        title: candidate.firstname + ' ' + candidate.lastname + ' | Lykkepartiet',
         description: candidate.motivation,
         image: candidate.picture + '?w=1200',
         square: true,
-        alt: candidate.firstname + ' ' + candidate.lastname + ' | Initiativet',
+        alt: candidate.firstname + ' ' + candidate.lastname + ' | Lykkepartiet',
         url: host + path,
         host: host
       };
@@ -34,12 +34,12 @@ async function botMetaTagServer(host, path) {
   }
   if (entity === 'candidates') {
     og = {
-      title: 'Initiativets kandidater | Initiativet',
+      title: 'Lykkepartiets kandidater | Lykkepartiet',
       description:
-        'På Initiativets digitale platform kan du finde Initiativets kandidater, læse om deres motivation og kvalifikationer, støtte den bedste, eller tilmelde dig opstilling på Initiativets liste.',
-      image: host + '/initiativet_og.png',
+        'På Lykkepartiets digitale platform kan du finde Lykkepartiets kandidater, læse om deres motivation og kvalifikationer, støtte den bedste, eller tilmelde dig opstilling på Lykkepartiets liste.',
+      image: host + '/lykkepartiet_og.png',
       square: false,
-      alt: 'Initiativets logo på en stor grå baggrund',
+      alt: 'Lykkepartiets logo på en stor hvid baggrund',
       url: host + path,
       host: host
     };
@@ -48,11 +48,11 @@ async function botMetaTagServer(host, path) {
     const project = await getProjectProfile(entityId);
     if (project) {
       og = {
-        title: project.title + ' | Initiativet',
+        title: project.title + ' | Lykkepartiet',
         description: project.description,
-        image: host + '/assets/category-images/' + project['category_id'] + '.png',
+    image: host + '/lykkepartiet_og.png',
         square: false,
-        alt: project.title + ' | Initiativet',
+        alt: project.title + ' | Lykkepartiet',
         url: host + path,
         host: host
       };
@@ -60,12 +60,12 @@ async function botMetaTagServer(host, path) {
   }
   if (entity === 'projects') {
     og = {
-      title: 'Politiske projekter | Initiativet',
+      title: 'Politiske projekter | Lykkepartiet',
       description:
-        'På Initiativets digitale platform kan du finde borgernes politiske projekter, støtte de bedste, eller udvikle dit eget projekt.',
-      image: host + '/initiativet_og.png',
+        'På Lykkepartiets digitale platform kan du finde borgernes politiske projekter, støtte de bedste, eller udvikle dit eget projekt.',
+      image: host + '/lykkepartiet_og.png',
       square: false,
-      alt: 'Initiativets logo på en stor grå baggrund',
+      alt: 'Lykkepartiets logo på en stor hvid baggrund',
       url: host + path,
       host: host
     };
@@ -74,11 +74,11 @@ async function botMetaTagServer(host, path) {
     const proposal = await getProposalProfile(entityId);
     if (proposal) {
       og = {
-        title: proposal.shortTitel + ' | Initiativet',
+        title: proposal.shortTitel + ' | Lykkepartiet',
         description: proposal.resume,
         image: host + '/assets/category-images/' + proposal.category + '.png',
         square: false,
-        alt: proposal.shortTitel + ' | Initiativet',
+        alt: proposal.shortTitel + ' | Lykkepartiet',
         url: host + path,
         host: host
       };
@@ -86,12 +86,12 @@ async function botMetaTagServer(host, path) {
   }
   if (entity === 'proposals') {
     og = {
-      title: 'Forslag fra Folketinget | Initiativet',
+      title: 'Forslag fra Folketinget | Lykkepartiet',
       description:
-        'På Initiativets digitale platformm kan du følge med i alle forslag fra Folketinget, læse deres resumeer og formål, give din mening til kende og se afstemningsresultaterne.',
-      image: host + '/initiativet_og.png',
+        'På Lykkepartiets digitale platformm kan du følge med i alle forslag fra Folketinget, læse deres resumeer og formål, give din mening til kende og se afstemningsresultaterne.',
+      image: host + '/lykkepartiet_og.png',
       square: false,
-      alt: 'Initiativets logo på en stor grå baggrund',
+      alt: 'Lykkepartiets logo på en stor hvid baggrund',
       url: host + path,
       host: host
     };
