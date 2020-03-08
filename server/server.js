@@ -48,6 +48,8 @@ function listeningHandler() {
   const mailBatcher = require('./src/mail/mailBatch');
   const schedule = require('node-schedule');
   if (environment === 'production') {
+    // disabled all email sending
+    //
     // schedule.scheduleJob('0 0 10 * * 2', () => {
     //   console.log('running weekly email batch job');
     //   mailBatcher('weekly');

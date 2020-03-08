@@ -14,7 +14,7 @@ const getVoteResults = require('../../db/vote/getVoteResults');
 async function ftBatchFetcher() {
   // console.log('ftBatchFetcher started');
   const proposalExpand = '&$expand=Sagsstatus,Periode,Sagstype,SagAkt%C3%B8r,Sagstrin/Afstemning';
-  const proposalFilter = '&$filter=(typeid eq 3 or typeid eq 5) and periodeid eq 146';
+  const proposalFilter = '&$filter=(typeid eq 3 or typeid eq 5) and periodeid eq 151';
   const proposalUrl = 'http://oda.ft.dk/api/Sag?$orderby=id desc' + proposalExpand + proposalFilter;
   const proposalList = await odaFetcher.fetchAllPages(proposalUrl);
   // console.log('oda.ft.dk responded with proposalList');
@@ -27,11 +27,12 @@ async function ftBatchFetcher() {
   }, proposalList);
   // console.log('proposal list was filtered for bad apples');
   const existingProposalList = await getProposalList();
-  for (const proposal of existingProposalList) {
-    const hasJustClosed = proposal.deadline === 'Afsluttet' && !proposal.state;
-    hasJustClosed && (await updateProposalState(proposal.id, 'closed'));
-    hasJustClosed && resultsMailBatch(proposal);
-  }
+  // disabled all mail
+  // for (const proposal of existingProposalList) {
+  //   const hasJustClosed = proposal.deadline === 'Afsluttet' && !proposal.state;
+  //   hasJustClosed && (await updateProposalState(proposal.id, 'closed'));
+  //   hasJustClosed && resultsMailBatch(proposal);
+  // }
   for (const proposal of filteredProposalList) {
     const existingProposal = R.find(R.propEq('id', proposal.id))(existingProposalList);
     async function presentation() {
@@ -43,12 +44,12 @@ async function ftBatchFetcher() {
         paragraphs: { listItem: '.TekstGenerel' },
         proposer: '.Fremsaetter'
       });
-      if (!presentation.paragraphs.length) {
+      if (!presentation.data.paragraphs.length) {
         // console.log('We could not find a presentation for proposal: ' + proposal.id);
         return null;
       } else {
         // console.log('I found a presentation!');
-        return presentation;
+        return presentation.data;
       }
     }
     const stageInfo = findStageInfo(proposal.Sagstrin);
