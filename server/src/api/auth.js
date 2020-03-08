@@ -2,17 +2,20 @@
 const lookupUser = require('../db/user/lookupUser');
 const createUser = require('../db/user/createUser');
 const parseAuthToken = require('../logic/parseAuthToken');
+const namespace = 'https://app.lykkepartiet.dk/'
 
 //Functions
 async function loginPostHandler(request, response) {
   const authToken = request.params.authToken;
-  const tokenInfo = await parseAuthToken(authToken);
+  let tokenInfo = await parseAuthToken(authToken);
+
+  /* auth0 stopped providing user_metadata by default, so the information is added by a custom rule */
+  tokenInfo = {...tokenInfo, user_metadata: tokenInfo[namespace + 'user_metadata']}
+
   if (tokenInfo) {
     const knownUser = await lookupUser(tokenInfo);
     const userCreated = new Date(tokenInfo.created_at)
-    const emailVerificationRollout = new Date('2018-04-02')
-    const isEarlyAdapter = userCreated <= emailVerificationRollout
-    const verified = tokenInfo.email_verified || isEarlyAdapter;
+    const verified = tokenInfo.email_verified
     if (verified) {
       if (!knownUser) {
         const newUser = await createUser(tokenInfo);
