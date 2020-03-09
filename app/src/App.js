@@ -2,7 +2,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 // data
 import stateBuilder from './stateBuilder';
@@ -139,12 +139,12 @@ class App extends Component {
   render() {
     const logPageView = () => {
       window.scrollTo(0, 0);
-      if (process.env.NODE_ENV === 'production') {
-        ReactGA.initialize('UA-107447977-1');
-        const page = window.location.pathname;
-        ReactGA.set({ page: page });
-        ReactGA.pageview(page);
-      }
+      // if (process.env.NODE_ENV === 'production') {
+      //   ReactGA.initialize('UA-107447977-1');
+      //   const page = window.location.pathname;
+      //   ReactGA.set({ page: page });
+      //   ReactGA.pageview(page);
+      // }
       return null;
     };
     const state = JSON.stringify(Object.assign({}, this.state, { modal: false }));
@@ -409,7 +409,7 @@ class App extends Component {
             </Switch>
           )}
           <Footer />
-          {this.state.anonymousUser && <CookieBanner updateState={this.updateState} />}
+          {/* this.state.anonymousUser && <CookieBanner updateState={this.updateState} /> */}
         </div>
       </Router>
     );
