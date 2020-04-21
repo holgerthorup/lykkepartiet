@@ -1,8 +1,8 @@
 // Import
-const getUser = require('../logic/getUser');
-const lookupPreference = require('../db/preference/lookupPreference');
-const changePreference = require('../db/preference/changePreference');
-const createPreference = require('../db/preference/createPreference');
+const getUser = require("../logic/getUser");
+const lookupPreference = require("../db/preference/lookupPreference");
+const changePreference = require("../db/preference/changePreference");
+const createPreference = require("../db/preference/createPreference");
 
 async function postPreferenceHandler(request, response) {
   try {
