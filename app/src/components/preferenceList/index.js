@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import FeatherIcon from '../../components/featherIcon';
+import React, { Component } from "react";
+import FeatherIcon from "../../components/featherIcon";
 
 class PreferenceList extends Component {
   constructor() {
@@ -8,17 +8,20 @@ class PreferenceList extends Component {
   }
 
   async updatingPreference(preference) {
-    this.props.updateState({ entityType: 'preferenceList', entity: preference });
-    const response = await fetch('/api/preference', {
-      method: 'POST',
+    this.props.updateState({
+      entityType: "preferenceList",
+      entity: preference
+    });
+    const response = await fetch("/api/preference", {
+      method: "POST",
       body: JSON.stringify({ preference }),
       headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + window.localStorage.authToken
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + window.localStorage.authToken
       }
     });
     if (!response.ok) {
-      this.props.updateState({ entityType: 'modal', entity: response.status });
+      this.props.updateState({ entityType: "modal", entity: response.status });
     }
   }
 
@@ -39,17 +42,23 @@ class PreferenceList extends Component {
                 <div onClick={() => this.updatingPreference(preference)}>
                   <button
                     className={
-                      (preference.preference ? 'bg-white shadow-sm' : 'text-grey-dark bg-grey-lighter') +
-                      ' border border-grey-light rounded-l-sm no-outline px-3 py-2'
-                    }>
-                    Følg
+                      (preference.preference
+                        ? "bg-white shadow-sm text-green"
+                        : "text-grey-dark bg-grey-lighter") +
+                      " border border-grey-light rounded-l-sm no-outline px-3 py-2"
+                    }
+                  >
+                    <FeatherIcon name="Check" />
                   </button>
                   <button
                     className={
-                      (preference.preference ? 'text-grey-dark bg-grey-lighter' : 'bg-white shadow-sm') +
-                      ' border border-l-0 border-grey-light rounded-r-sm no-outline px-3 py-2'
-                    }>
-                    Ikke
+                      (preference.preference
+                        ? "text-grey-dark bg-grey-lighter"
+                        : "bg-white shadow-sm") +
+                      " border border-l-0 border-grey-light rounded-r-sm no-outline px-3 py-2"
+                    }
+                  >
+                    <FeatherIcon name="X" />
                   </button>
                 </div>
               </div>
